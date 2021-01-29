@@ -82,7 +82,7 @@
 /* Home Section Styling */
 .home {
   display: flex;
-  background: url(images/black.jpg) no-repeat center;
+  background: url(images/black.jpg) center;
   height: 100vh;
   color: white;
   min-height: 500px;
@@ -126,17 +126,31 @@
   color: #d6aa38;
 }
 
-/* About Section */
+/* ALL SIMILAR STYLING  */
+
+.about,
+.services,
+.contact,
+.projects {
+  font-family: "Montserrat", sans-serif;
+}
+
+.about .about-content,
+.services .serv-content,
+.contact .contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
 
 section {
   padding: 100px 0;
   color: white;
   background-color: black;
 }
-.about {
-  font-family: "Montserrat", sans-serif;
-}
-.about .title {
+
+section .title {
   position: relative;
   font-size: 40px;
   font-weight: 500;
@@ -146,7 +160,7 @@ section {
   font-family: "Rubik", sans-serif;
 }
 
-.about .title::before {
+section .title::before {
   content: "";
   position: absolute;
   bottom: 0px;
@@ -156,8 +170,7 @@ section {
   background: white;
   transform: translateX(-50%);
 }
-.about .title::after {
-  content: "Who I Am";
+section .title::after {
   position: absolute;
   bottom: -13px;
   left: 50%;
@@ -168,11 +181,10 @@ section {
   transform: translateX(-50%);
 }
 
-.about .about-content {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
+/* About Section */
+
+.about .title::after {
+  content: "Who I Am";
 }
 
 .about .about-content .left {
@@ -211,13 +223,224 @@ section {
   border: 2px solid #d6aa38;
   transition: all 0.3s ease;
 }
+.about .about-content .right a:hover {
+  background: none;
+  color: #d6aa38;
+  font-weight: 500;
+}
 
-/* Media Queries */
-@media (max-width: 1104px) {
+/* services section start */
+.services .serv-content .card {
+  width: calc(33% - 20px);
+  background-color: #222;
+  text-align: center;
+  border-radius: 6px;
+  padding: 20px 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.services .serv-content .card:hover {
+  background: #d6aa38;
+}
+.services .serv-content .card:hover i {
+  color: black;
+}
+
+.services .serv-content .card:hover .box {
+  transform: scale(1.05);
+}
+
+.services .serv-content .card .box {
+  transition: all 0.3s ease;
+}
+
+.services .serv-content .card i {
+  font-size: 50px;
+  color: #d6aa38;
+  transition: all 0.3s ease;
+}
+.services .serv-content .card .text {
+  font-size: 25px;
+  font-weight: 500;
+  margin: 10px 0 7px 0;
+}
+
+.services .title::after {
+  content: "What I Provide";
+}
+
+/* PROJECTS SECTION  */
+
+.projects .title::after {
+  content: "What Ive Done";
+}
+
+.projects .carousel .card {
+  background: #222;
+  border-radius: 6px;
+  padding: 25px 35px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.projects .carousel .card:hover {
+  background: #d6aa38;
+  color: black;
+}
+
+.projects .carousel .card:hover .box {
+  transform: scale(1.05);
+}
+
+.projects .carousel .card .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.projects .carousel .card .text {
+  font-size: 25px;
+  font-weight: 500;
+  margin: 10px 0 7px 0;
+}
+.projects .carousel .card .text-2,
+.text-3 {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 10px 0 7px 0;
+}
+.projects .carousel .card img {
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #d6aa38;
+  transition: all 0.3s ease;
+}
+
+.projects .carousel .card a {
+  color: #d6aa38;
+  font-size: 15px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.projects .carousel .card:hover a {
+  color: #222;
+}
+
+.projects .carousel .card ul li {
+  list-style-type: none;
+}
+
+.projects .carousel .card:hover img {
+  border-color: black;
+}
+
+.owl-dots {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.owl-dot {
+  height: 13px;
+  width: 13px;
+  outline: none !important;
+  margin: 0 5px;
+  border-radius: 50%;
+  border: 2px solid #d6aa38 !important;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.owl-dot.active {
+  width: 35px;
+  border-radius: 14px;
+}
+
+.owl-dot.active,
+.owl-dot:hover {
+  background: #d6aa38 !important;
+}
+
+/* CONTACT SECTION */
+
+.contact .title::after {
+  content: "Get In Touch";
+}
+
+.contact .contact-content .column {
+  width: calc(50% - 30px);
+}
+.contact .contact-content .left p {
+  text-align: justify;
+}
+.contact .contact-content .text {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.contact .contact-content .left .icons {
+  margin: 10px 0;
+}
+.contact .contact-content .row {
+  display: flex;
+  height: 65px;
+  align-items: center;
+}
+.contact .contact-content .row .info {
+  margin-left: 30px;
+}
+.contact .contact-content .row i {
+  font-size: 25px;
+  color: #d6aa38;
+}
+
+.contact .contact-content .info .head {
+  font-weight: 500;
+}
+.contact .contact-content .info .sub-title {
+  color: rgb(194, 194, 194);
+}
+
+.contact .right form .fields {
+  display: flex;
+}
+
+.contact .right form .field,
+.contact .right form .fields .field {
+  height: 45px;
+  width: 100%;
+}
+.contact .right form .field input {
+  height: 100%;
+  width: 100%;
+  border: 1px solid lightgray;
+  border-radius: 6px;
+  outline: none;
+  padding: 0 15px;
+  font-size: 17px;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 1300px) {
   .home .max-width {
     margin-left: 0px;
   }
 }
+
+@media (max-width: 1104px) {
+  .about .about-content .left img {
+    height: 350px;
+    width: 350px;
+  }
+}
+
 @media (max-width: 991px) {
   .max-width {
     padding: 0 50px;
@@ -267,6 +490,24 @@ section {
     font-size: 23px;
     padding: 10px 30px;
   }
+  .max-width {
+    max-width: 800px;
+  }
+  .about .about-content .column {
+    width: 50%;
+  }
+  .about .about-content .left {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 60px;
+  }
+  .about .about-content .right {
+    flex: 100%;
+  }
+  .services .serv-content .card {
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+  }
 }
 @media (max-width: 690px) {
   .max-width {
@@ -280,6 +521,9 @@ section {
   }
   .home .home-content a {
     font-size: 20px;
+  }
+  .services .serv-content .card {
+    width: 100%;
   }
 }
 @media (max-width: 500px) {
