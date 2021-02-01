@@ -7,6 +7,7 @@
   <title>Chey Rose</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link rel="shortcut icon" type="image" href="images/icon.png"/>
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Rubik:wght@400;500;700&display=swap"
     rel="stylesheet" />
@@ -46,7 +47,7 @@
         <div class="text-1">Hello, my name is</div>
         <div class="text-2">Chey Rose</div>
         <div class="text-3">And I am a <span class="typing"></span></div>
-        <a href="#" class="href">Hire Me</a>
+        <!-- <a href="#" class="href">Hire Me</a> -->
       </div>
     </div>
   </section>
@@ -73,8 +74,8 @@
             scary after all! Other than coding I usually spend my days with my
             dog Rosco, or hanging out with my family. In the future I hope to
             be debugging and developing sites for you!
-          </p>
-          <a href="#">Download CV</a>
+          <!-- </p>
+          <a href="#">Download CV</a> -->
         </div>
       </div>
     </div>
@@ -97,7 +98,7 @@
         <div class="card">
           <div class="box">
             <i class="fas fa-chart-line"></i>
-            <div class="text">Data Analysis</div>
+            <div class="text">Back-End Engineer</div>
             <p>
               Learned how to manage databases & large sets of data using
               PostgreSQL. Can pull and push data using Restful APIs.
@@ -109,7 +110,7 @@
             <i class="fas fa-code"></i>
             <div class="text">App programming</div>
             <p>
-            I can create web apps with more
+              I can create web apps with more
               functionality than just interactivity! We can create
               anything together! Just conact me.
             </p>
@@ -158,14 +159,14 @@
             <div class="text">Petful</div>
             <p>
               Adoption site with a first come first serve basis using
-              javascript DSA Stacks and Queues.
+              Javascript DSA Stacks and Queues.
             </p>
             <div class="text-2">Tech Used</div>
             <ul>
               <li>React</li>
-              <li>PostgreSQL</li>
               <li>HTML</li>
               <li>CSS</li>
+              <li>Cypress</li>
             </ul>
             <div class="text-3">Links</div>
             <ul>
@@ -208,7 +209,7 @@
                 </li>
                 <li>
                   <a
-                    class=" github" target="_blank" href="https://nonexistent.com/">Live App</a>
+                    class=" github" target="_blank" href="https://yamma-client-bcn857hee.vercel.app/">Live App</a>
               </li>
             </ul>
           </div>
@@ -262,7 +263,7 @@
               <i class="fab fa-linkedin-in"></i>
               <div class="info">
                 <div class="head">Linkden</div>
-                <div class="sub-title">Chey Rose</div>
+                <a target="_blank" href="https://www.linkedin.com/in/cheyenneflammer/">Click Me!</a>
               </div>
             </div>
             <!-- two -->
@@ -270,7 +271,7 @@
               <i class="fab fa-github-alt"></i>
               <div class="info">
                 <div class="head">Github</div>
-                <div class="sub-title">Click Me!</div>
+                <a target="_blank" href="https://github.com/Cheyroseflammer">Click Me!</a>
               </div>
             </div>
             <!-- three -->
@@ -288,20 +289,21 @@
         <div class="column right">
           <div class="text">
             Message me</div>
-          <form action="#">
+          <form action="https://formspree.io/f/xknqdqkv"
+          method="POST">
             <div class="fields">
               <div class="field name">
-                <input type="text" placeholder="Name" required>
+                <input name="name" type="text" placeholder="Name" required>
               </div>
               <div class="field email">
-                <input type="email" placeholder="Email" required>
+                <input name="_replyto" type="email" placeholder="Email" required>
               </div>
             </div>
             <div class="field">
-              <input type="text" placeholder="Subject" required>
+              <input name="subject" type="text" placeholder="Subject" required>
             </div>
             <div class="field textarea">
-              <textarea cols="30" rows="10" placeholder="Message.." required></textarea>
+              <textarea name="message" cols="30" rows="10" placeholder="Message.." required></textarea>
             </div>
             <div class="button">
               <button type="submit">Send message</button>

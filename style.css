@@ -393,6 +393,15 @@ section .title::after {
 .contact .title::after {
   content: "Get In Touch";
 }
+
+.contact a {
+  color: white;
+}
+
+.contact a:visited {
+  color: #d6aa38;
+}
+
 .contact .contact-content .column {
   width: calc(50% - 30px);
 }
